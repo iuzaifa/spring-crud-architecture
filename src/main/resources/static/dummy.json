@@ -1,0 +1,17 @@
+[
+  {
+    "categoryName": "Electronics",
+    "categoryName": "Books",
+    "categoryName": "Clothing",
+    "categoryName": "Furniture",
+    "categoryName": "Sports"
+  },
+  { "productName": "Smartphone X", "productDescription": "Latest Android smartphone with AMOLED display.", "productPrice": 699.99, "categoryId": 1 },
+  { "productName": "Bluetooth Headphones", "productDescription": "Noise-cancelling over-ear headphones.", "productPrice": 129.99, "categoryId": 1 },
+  { "productName": "Science Fiction Novel", "productDescription": "A futuristic journey through time.", "productPrice": 15.49, "categoryId": 2 },
+  { "productName": "Cooking Book", "productDescription": "Over 100 easy recipes to try at home.", "productPrice": 18.25, "categoryId": 2 },
+  { "productName": "Men's Jacket", "productDescription": "Waterproof outdoor jacket for winter.", "productPrice": 89.99, "categoryId": 3 },
+  { "productName": "Women's T-Shirt", "productDescription": "Soft cotton short sleeve t-shirt.", "productPrice": 22.50, "categoryId": 3 },
+  { "productName": "Office Desk", "productDescription": "Wooden study desk with drawers.", "productPrice": 189.00, "categoryId": 4 },
+  { "productName": "Football", "productDescription": "Official size leather football.", "productPrice": 28.75, "categoryId": 6 },
+]
