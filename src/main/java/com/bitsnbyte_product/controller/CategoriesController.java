@@ -4,6 +4,7 @@ package com.bitsnbyte_product.controller;
 import com.bitsnbyte_product.constant.CommonConstants;
 import com.bitsnbyte_product.dto.CategoriesDTO;
 import com.bitsnbyte_product.entities.Categories;
+import com.bitsnbyte_product.exception.CategoriesExitsException;
 import com.bitsnbyte_product.services.CategoriesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,6 +24,8 @@ public class CategoriesController {
     // CREATE CATEGORIES
     @PostMapping(CommonConstants.CREATE_CATEGORIES)
     public ResponseEntity<CategoriesDTO> createCategories(@RequestBody CategoriesDTO categoriesDTO){
+//        CategoriesDTO savedCategory = categoriesService.createCategories(categoriesDTO);
+//        return new ResponseEntity<>(savedCategory,HttpStatus.CREATED);
         return new ResponseEntity<>(categoriesService.createCategories(categoriesDTO), HttpStatus.CREATED);
     }
 

@@ -2,12 +2,14 @@ package com.bitsnbyte_product.services;
 
 import com.bitsnbyte_product.dto.CategoriesDTO;
 import com.bitsnbyte_product.entities.Categories;
+import com.bitsnbyte_product.exception.CategoriesExitsException;
 import com.bitsnbyte_product.mapper.CategoriesMapper;
 import com.bitsnbyte_product.repositories.CategoriesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -22,6 +24,10 @@ public class CategoriesServiceImpl implements CategoriesService{
     public CategoriesDTO createCategories(CategoriesDTO categoriesDTO) {
         if (categoriesDTO == null) {
             throw new IllegalArgumentException("CategoriesDTO cannot be null");
+        }
+        Optional<Categories> categoriesOptional = categoriesRepository.findByCategoryName(categoriesDTO.getCategoryName());
+        if (categoriesOptional.isPresent()){
+            throw new CategoriesExitsException("Category `"+ categoriesDTO.getCategoryName() +"` already exits");
         }
         Categories categories = CategoriesMapper.toCategoriesEntity(categoriesDTO); // DTO to Entity
         categories = categoriesRepository.save(categories); // entity save
