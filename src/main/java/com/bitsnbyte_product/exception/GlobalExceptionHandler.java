@@ -42,6 +42,7 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(exceptionResponseDTO);
     }
 
+    @ExceptionHandler(Exception.class)
     public ResponseEntity<ExceptionResponseDTO> globalExceptionHandler(Exception exception, WebRequest webRequest){
         ExceptionResponseDTO exceptionResponseDTO = new ExceptionResponseDTO(
                 webRequest.getDescription(false),
