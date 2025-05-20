@@ -38,6 +38,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -45,16 +49,19 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-<!--		com.h2database an in-memory setup, all data will disappear once the application stops or restarts. -->
-<!--		<dependency>-->
-<!--			<groupId>com.h2database</groupId>-->
-<!--			<artifactId>h2</artifactId>-->
-<!--			<scope>runtime</scope>-->
-<!--		</dependency>-->
 		<dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
+		</dependency>
+			<!--
+			OpenAPI (formerly known as Swagger) is used in Spring Boot to automatically generate
+			interactive API documentation and make it easier to:
+			-->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.8.8</version>
 		</dependency>
 
 		<dependency>

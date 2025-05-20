@@ -1,8 +1,14 @@
 package com.bitsnbyte_product.dto;
 
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 
+
+@Schema(
+        name = "Products",
+        description = "It hold Categories information"
+)
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
