@@ -5,7 +5,18 @@ public class CommonConstants {
 
 
 
+
     public static final String API_BASE_PATH = "/api";
+    public static final String USER_BASE_PATH = "/user";
+
+
+
+    // USERS APIS
+    public static final String CREATE_USERS =  "/register";
+    public static final String GET_ALL_USERS =  "/users";
+    public static final String GET_BY_ID_USER =  "/{userId}";
+    public static final String DELETE_USER_BY_ID =  "/{userId}";
+    public static final String UPDATE_USER_BY_ID =  "/{userId}";
 
 
     // PRODUCTS APIS
