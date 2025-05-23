@@ -22,13 +22,11 @@ public class CategoriesServiceImpl implements CategoriesService{
     // CREATE CATEGORIES
     @Override
     public CategoriesDTO createCategories(CategoriesDTO categoriesDTO) {
-        if (categoriesDTO == null) {
-            throw new IllegalArgumentException("CategoriesDTO cannot be null");
-        }
         Optional<Categories> categoriesOptional = categoriesRepository.findByCategoryName(categoriesDTO.getCategoryName());
         if (categoriesOptional.isPresent()){
             throw new CategoriesExitsException("Category `"+ categoriesDTO.getCategoryName() +"` already exits");
         }
+
         Categories categories = CategoriesMapper.toCategoriesEntity(categoriesDTO); // DTO to Entity
         categories = categoriesRepository.save(categories); // entity save
         return CategoriesMapper.toCategoryDTO(categories); // return dto
